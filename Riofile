@@ -12,6 +12,7 @@ configs:
 services:
     nginx:
         image: nginx
+        version: v0
         ports:
             - 80/http
         configs:
