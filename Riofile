@@ -7,7 +7,6 @@ services:
         - 8080:8080/grpc,grpc
         env:
         - GRPC_PORT=8080
-        cpus: 100m
         
     voting-svc:
         app: voting-svc
@@ -17,7 +16,6 @@ services:
         - 8080:8080/grpc,grpc
         env:
         - GRPC_PORT=8080
-        cpus: 100m
         
     web-svc:
         app: web-svc
@@ -30,7 +28,6 @@ services:
         - EMOJISVC_HOST=emoji-svc:8080
         - VOTINGSVC_HOST=voting-svc:8080
         - INDEX_BUNDLE=dist/index_bundle.js 
-        cpus: 100m  
         
     vote-bot:
         app: vote-bot
@@ -40,7 +37,6 @@ services:
         - emojivoto-vote-bot
         env:
         - WEB_HOST=web-svc:80
-        cpus: 10m
 
 
 
