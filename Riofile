@@ -27,8 +27,8 @@ services:
             - 80:8080/http,web
         env:
         - WEB_PORT=8080
-        - EMOJISVC_HOST=emoji-svc.emojivoto:8080
-        - VOTINGSVC_HOST=voting-svc.emojivoto:8080
+        - EMOJISVC_HOST=emoji-svc:8080
+        - VOTINGSVC_HOST=voting-svc:8080
         - INDEX_BUNDLE=dist/index_bundle.js 
         cpus: 100m  
         
@@ -39,7 +39,7 @@ services:
         command:
         - emojivoto-vote-bot
         env:
-        - WEB_HOST=web-svc.emojivoto:80
+        - WEB_HOST=web-svc:80
         cpus: 10m
 
 
