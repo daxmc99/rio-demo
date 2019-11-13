@@ -38,7 +38,14 @@ services:
         env:
         - WEB_HOST=web-svc:80
 
+configs:
+  sample-config:
+    sample-data: |-
+      Insert some sample-data here to configure your apps
 
-
-
-
+routers:
+  rio-emoji-router:
+    routes:
+    - match: {}
+      to:
+      - app: web-svc
