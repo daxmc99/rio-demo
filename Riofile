@@ -1,0 +1,10 @@
+services:
+  test-rbac-rio:
+    version: v0
+    global_permissions:
+    - '* configmaps'
+    - '* secrets'
+    - '* events'
+    - '* services'
+    - '* pods'
+    image: nginx
